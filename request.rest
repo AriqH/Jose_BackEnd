@@ -1,0 +1,61 @@
+GET http://localhost:5001/users
+
+###
+POST  http://localhost:5001/users
+Content-Type: application/json
+
+{
+    "name": "ariq",
+    "email": "ariqhuwaidi@gmail.com",
+    "password": "123456",
+    "confpassword": "1234567",
+}
+
+
+###
+POST  http://localhost:5001/login
+Content-Type: application/json
+
+{
+    "email": "ariq@gmail.com",
+    "password": "123456"
+}
+###
+GET http://localhost:5001/token
+
+###
+
+DELETE http://localhost:5001/logout
+
+###
+
+POST http://localhost:5001/reservation
+Content-Type: application/json
+
+{
+    "name": "Test User",
+    "date": "2023-10-28",
+    "email": "test@example.com",
+    "jenisHewan": "Cat",
+    "whatsapp": "123456789",
+    "tujuan": "Vet Clinic"
+}
+
+###
+
+DELETE http://localhost:5001/reservation/2
+
+###
+GET http://localhost:5001/reservation
+
+###
+POST  http://localhost:5001/adminRegister
+{
+    "name": "Admin Name",
+    "email": "admin@example.com",
+    "password": "adminpassword",
+    "confPassword": "adminpassword"
+}
+
+###
+GET http://localhost:5001/localhost:5001/reservation
