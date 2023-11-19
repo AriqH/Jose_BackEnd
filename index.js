@@ -9,7 +9,9 @@ import cookieParser from "cookie-parser";
 export const app = express();
 dotenv.config();
 
-app.use(cors());
+app.use(cors({
+    credentials: true,  origin: "*",
+}));
 app.use(cookieParser())
 
 app.use(bodyParser.json());
