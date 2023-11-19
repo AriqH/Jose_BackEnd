@@ -42,12 +42,7 @@ export const chatController = async (req, res) => {
             return;
         }
 
-        const responseData = response.data.choices[0].message;
-
-        // Simpan hasil di cache untuk pertanyaan yang sama
-        responseCache[prompt] = responseData;
-
-        res.send(responseData);
+        res.send(response.data.choices[0].message);
     } catch (error) {
         res.send(error.message);
     }
