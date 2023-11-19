@@ -19,7 +19,7 @@ export const chatController = async (req, res) => {
             return;
         }
 
-        const response = await openai.createChatCompletion({
+        const responsePromise = await openai.createChatCompletion({
             model: "gpt-3.5-turbo",
             messages: [
                 {
@@ -32,6 +32,14 @@ export const chatController = async (req, res) => {
                 },
             ],
         });
+
+        const timeoutPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+              reject(new Error('Waktu respons telah melewati batas.'));
+            }, 10000); // Timeout dalam milidetik (10 detik)
+          });
+
+          const response = await Promise.race([responsePromise, timeoutPromise]);
 
         if (
             !response.data.choices ||
