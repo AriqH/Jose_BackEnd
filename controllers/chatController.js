@@ -20,7 +20,7 @@ export const chatController = async (req, res) => {
       }
 
       const responsePromise = openai.createChatCompletion({
-        model: "gpt-3",
+        model: "gpt-3.5-turbo",
         messages: [
           {
             role: "system",
