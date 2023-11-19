@@ -9,14 +9,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/",
-            "methods": ["GET", "POST"]
+            "dest": "/"
         }
-    ],
-    "functions": {
-        "api/**/*.js": {
-        "memory": 1024,
-        "maxDuration": 300
-        }
-    }
+    ]
 }
