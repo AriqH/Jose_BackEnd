@@ -15,7 +15,7 @@ export const chatController = async (req, res) => {
         const isAnimalTypeQuestion = allowedAnimalTypes.some(type => prompt.toLowerCase().includes(type));
 
         if (!isAnimalTypeQuestion) {
-            res.send("Maaf, pertanyaan hanya boleh berhubungan dengan jenis hewan seperti kucing, anjing, sapi, babi, kuda, hamster, kelinci, kura-kura, otter, atau ular.");
+            res.send("Maaf, pertanyaan hanya boleh berhubungan dengan jenis hewan seperti kucing, anjing, sapi, babi, atau kuda.");
             return;
         }
 
