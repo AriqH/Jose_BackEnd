@@ -8,7 +8,7 @@ Content-Type: application/json
     "name": "ariq",
     "email": "ariqhuwaidi@gmail.com",
     "password": "123456",
-    "confpassword": "1234567",
+    "confpassword": "123456",
 }
 
 
